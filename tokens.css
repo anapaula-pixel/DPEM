@@ -1,0 +1,296 @@
+/* =========================================================
+   Akad Seguros — Design Tokens
+   colors_and_type.css
+
+   Single source of truth for color, typography, spacing,
+   radius, shadow and motion. Import in any HTML file:
+     <link rel="stylesheet" href="/colors_and_type.css">
+   ========================================================= */
+
+/* Poppins — display family (Google Fonts; Akad brand fonts uploaded only cover Open Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  /* ---------- BRAND COLORS — Primary (rosa/magenta) ---------- */
+  --primary-darker:   #720028;
+  --primary-dark:     #B0003F;
+  --primary-base:     #EC175E;
+  --primary-light:    #FAA8C9;
+  --primary-lighter:  #FFD3E6;
+  --primary-lightest: #FFEEF5;
+
+  /* ---------- BRAND COLORS — Secondary (azul marinho) ---------- */
+  --secondary-darker:   #001F40;
+  --secondary-dark:     #002B5A;
+  --secondary-base:     #1C4175;
+  --secondary-light:    #F1F3F8;
+  --secondary-lighter:  #DEE3FF;
+  --secondary-lightest: #EDEFFF;
+
+  /* ---------- BACKGROUND ---------- */
+  --bg-base:    #FFFFFF;
+  --bg-inverse: #1F1B1C;
+
+  /* ---------- FEEDBACK ---------- */
+  --info-dark:    #003399;
+  --info-base:    #0064CC;
+  --info-light:   #B6DEFF;
+  --info-lighter: #E5EEFF;
+
+  --success-dark:    #219C00;
+  --success-base:    #75C24A;
+  --success-light:   #BCEF96;
+  --success-lighter: #E5FFDB;
+
+  --error-dark:    #A00505;
+  --error-base:    #E01818;
+  --error-light:   #FF7171;
+  --error-lighter: #FFC0C0;
+
+  --alert-dark:    #C78800;
+  --alert-base:    #EBA400;
+  --alert-light:   #FFD49F;
+  --alert-lighter: #FFF39A;
+
+  /* ---------- NEUTRALS ---------- */
+  --neutral-90: #1F1F21;
+  --neutral-80: #424242;
+  --neutral-70: #616160;
+  --neutral-60: #757575;
+  --neutral-50: #9C9E9B;
+  --neutral-40: #B0B0B0;
+  --neutral-30: #C0C0B9;
+  --neutral-20: #EEEEEE;
+  --neutral-10: #F3F5F5;
+  --neutral-05: #FAFAFA;
+
+  /* ---------- SEMANTIC SHORTCUTS ---------- */
+  --fg-1: var(--neutral-90);    /* primary text */
+  --fg-2: var(--neutral-70);    /* secondary text */
+  --fg-3: var(--neutral-50);    /* placeholder, helper */
+  --fg-on-primary: #FFFFFF;
+  --fg-on-inverse: #FFFFFF;
+  --fg-link: var(--info-base);
+  --fg-link-visited: var(--secondary-base);
+
+  --surface-1: var(--bg-base);          /* cards, content */
+  --surface-2: var(--neutral-05);       /* page background */
+  --surface-3: var(--neutral-10);       /* nested / hover */
+  --surface-tint: var(--secondary-lightest); /* subtle brand wash */
+
+  --border-subtle:    var(--neutral-20);
+  --border-default:   var(--neutral-30);
+  --border-strong:    var(--neutral-50);
+  --border-focus:     var(--primary-base);
+  --border-error:     var(--error-base);
+
+  /* ---------- TYPOGRAPHY — families ---------- */
+  --font-display: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body:    'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ---------- TYPOGRAPHY — weights ---------- */
+  --w-extralight: 200;
+  --w-light:      300;
+  --w-regular:    400;
+  --w-medium:     500;
+  --w-semibold:   600;
+  --w-bold:       700;
+  --w-extrabold:  800;
+
+  /* ---------- TYPOGRAPHY — scale (web) ---------- */
+  --fs-xxs:  10px;
+  --fs-xs:   11px;
+  --fs-sm:   13px;
+  --fs-md:   16px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-xxl:  32px;
+  --fs-xxxl: 40px;
+  --fs-huge: 96px;
+
+  /* ---------- TYPOGRAPHY — line heights ---------- */
+  --lh-tight:   1.0;   /* 100% — display */
+  --lh-medium:  1.2;   /* 120% — default headings */
+  --lh-distant: 1.5;   /* 150% — body */
+
+  /* ---------- SPACING — Stack (vertical between elements) ---------- */
+  --stack-quark: 4px;
+  --stack-nano:  8px;
+  --stack-xxxs:  16px;
+  --stack-xxs:   24px;
+  --stack-xs:    32px;
+  --stack-sm:    40px;
+
+  /* ---------- SPACING — Inset (padding inside components) ---------- */
+  --inset-xs:  8px;
+  --inset-sm:  16px;
+  --inset-md:  24px;
+  --inset-lg:  32px;
+  --inset-xl:  40px;
+  --inset-xxl: 48px;
+
+  /* ---------- RADIUS ---------- */
+  --r-sm:   4px;   /* inputs, small chips */
+  --r-md:   8px;   /* cards, modals, buttons */
+  --r-lg:   12px;  /* large hero modules */
+  --r-pill: 999px; /* pills, avatars */
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-sm: 0 1px 2px rgba(31, 31, 33, 0.06);
+  --shadow-md: 0 4px 12px rgba(31, 31, 33, 0.08);
+  --shadow-lg: 0 12px 32px rgba(31, 31, 33, 0.12);
+
+  /* ---------- MOTION ---------- */
+  --t-fast:   150ms ease-out;
+  --t-normal: 200ms ease-out;
+  --t-slide:  240ms cubic-bezier(.2,.8,.2,1);
+
+  /* ---------- LAYOUT ---------- */
+  --header-h: 64px;
+  --sidebar-w: 240px;
+  --content-max: 1280px;
+}
+
+/* =========================================================
+   Base reset (very light)
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-distant);
+  color: var(--fg-1);
+  background: var(--surface-1);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================
+   Semantic typography helpers
+   Use directly OR mix into your own selectors.
+   ========================================================= */
+
+/* Display */
+.t-huge {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-huge);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+}
+
+/* Headings — Poppins Bold per spec */
+.t-h1, h1.t {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-xxxl);   /* 40 */
+  line-height: var(--lh-medium);
+  letter-spacing: -0.01em;
+}
+.t-h2, h2.t {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-xxl);    /* 32 */
+  line-height: var(--lh-medium);
+}
+.t-h3, h3.t {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-xl);     /* 24 */
+  line-height: var(--lh-medium);
+}
+.t-h4, h4.t {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-lg);     /* 20 */
+  line-height: var(--lh-medium);
+}
+.t-h5, h5.t {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-md);     /* 16 */
+  line-height: var(--lh-medium);
+}
+
+/* Subtitles — Poppins Regular */
+.t-sub-lg {
+  font-family: var(--font-display);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-medium);
+  color: var(--fg-2);
+}
+.t-sub-sm {
+  font-family: var(--font-display);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-md);
+  line-height: var(--lh-medium);
+  color: var(--fg-2);
+}
+
+/* Paragraphs — Open Sans */
+.t-p-lg {
+  font-family: var(--font-body);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-distant);
+}
+.t-p, .t-p-base {
+  font-family: var(--font-body);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-md);
+  line-height: var(--lh-distant);
+}
+.t-p-sm {
+  font-family: var(--font-body);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-distant);
+}
+.t-p-bold { font-weight: var(--w-bold); }
+
+/* Caption */
+.t-caption {
+  font-family: var(--font-body);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-medium);
+  color: var(--fg-2);
+}
+.t-caption-bold { font-weight: var(--w-bold); }
+
+/* Buttons & Links */
+.t-button {
+  font-family: var(--font-body);
+  font-weight: var(--w-semibold);
+  font-size: var(--fs-md);
+  line-height: var(--lh-medium);
+  letter-spacing: 0.01em;
+}
+.t-link {
+  color: var(--fg-link);
+  text-decoration: none;
+  transition: text-decoration var(--t-fast);
+}
+.t-link:hover    { text-decoration: underline; }
+.t-link:visited  { color: var(--fg-link-visited); }
+
+/* Tabular digits — for currency / dates / IDs */
+.t-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Eyebrow / badge label */
+.t-eyebrow {
+  font-family: var(--font-body);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
