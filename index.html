@@ -1217,8 +1217,8 @@
   /* ---------- responsive ---------- */
   @media (max-width: 1024px) {
     .hero-inner { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 56px; gap: 32px; }
-    .hero-photo { min-height: 0; padding-bottom: 0; justify-content: center; }
-    .hero-photo .photo-wrap { max-width: 480px; aspect-ratio: 5 / 4; }
+    .hero-photo { min-height: 0; padding-bottom: 0; justify-content: center; height: auto; }
+    .hero-photo .photo-wrap { max-width: 480px; aspect-ratio: 5 / 4; max-height: none; }
     .hero h1 { font-size: clamp(34px, 6vw, 48px); }
     .hero p.lead { font-size: 18px; max-width: none; }
     .btn-hero { min-width: 0; padding: 0 40px; }
