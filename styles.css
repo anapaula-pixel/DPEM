@@ -45,7 +45,7 @@ section { padding: clamp(56px, 9vw, 96px) 0; }
   gap: 8px;
   height: 52px;
   padding: 0 28px;
-  border-radius: 10px;
+  border-radius: var(--r-sm);
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -62,7 +62,7 @@ section { padding: clamp(56px, 9vw, 96px) 0; }
 .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: var(--neutral-00); }
 .btn-white { background: var(--neutral-00); color: var(--primary-base); }
 .btn-white:hover { background: var(--primary-lightest); }
-.btn-sm { height: 40px; padding: 0 18px; font-size: 14px; border-radius: 8px; }
+.btn-sm { height: 40px; padding: 0 18px; font-size: 14px; }
 
 /* ---------- header ---------- */
 .header {
@@ -777,7 +777,7 @@ section { padding: clamp(56px, 9vw, 96px) 0; }
   justify-content: center;
   gap: 8px;
   padding: 14px 32px;
-  border-radius: 8px;
+  border-radius: var(--r-sm);
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -871,7 +871,6 @@ section { padding: clamp(56px, 9vw, 96px) 0; }
   height: 60px;
   padding: 0 30px;
   font-size: 16px;
-  border-radius: 12px;
   box-shadow: 0 2px 4px rgba(227,23,94,0.22), 0 16px 36px rgba(227,23,94,0.32);
 }
 .sinistro .btn-si-main:hover {
