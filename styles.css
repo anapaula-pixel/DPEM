@@ -58,6 +58,16 @@ section { padding: clamp(56px, 9vw, 96px) 0; }
 .btn:active { transform: translateY(1px); }
 .btn-primary { background: var(--primary-base); color: var(--neutral-00); }
 .btn-primary:hover { background: var(--primary-dark); }
+.btn-secondary {
+  background: var(--neutral-00);
+  color: var(--primary-base);
+  border-color: var(--primary-base);
+}
+.btn-secondary:hover {
+  background: var(--primary-lightest);
+  color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
 .btn-outline-white { background: transparent; color: var(--neutral-00); border-color: rgba(255,255,255,0.55); }
 .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: var(--neutral-00); }
 .btn-white { background: var(--neutral-00); color: var(--primary-base); }
