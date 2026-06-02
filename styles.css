@@ -153,9 +153,6 @@ section { padding: clamp(56px, 9vw, 96px) 0; }
   align-items: center;
   gap: 16px;
 }
-.nav-backdrop { display: none; }
-body.nav-open { overflow: hidden; }
-
 @media (max-width: 768px) {
   .nav-toggle { display: inline-flex; }
   .nav-panel {
@@ -187,16 +184,6 @@ body.nav-open { overflow: hidden; }
     width: 100%;
     white-space: normal;
     text-align: center;
-  }
-  .nav-backdrop {
-    display: block;
-    position: fixed;
-    inset: var(--header-bar-h) 0 0;
-    z-index: 55;
-    background: rgba(33, 33, 33, 0.35);
-    border: 0;
-    padding: 0;
-    cursor: pointer;
   }
 }
 .nav-link {

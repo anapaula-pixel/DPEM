@@ -37,7 +37,6 @@
         <a href="https://dpem.com.br/" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">Acessar minha conta</a>
         <a href="https://dpem.com.br/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Contratar agora</a>
       </div>
-      <div class="nav-backdrop" hidden></div>
     </nav>
   </div>
 </header>
@@ -503,19 +502,22 @@ não navega.</h2>
     const header = document.querySelector('.header');
     const toggle = document.querySelector('.nav-toggle');
     const panel = document.getElementById('nav-panel');
-    const backdrop = document.querySelector('.nav-backdrop');
-    if (!header || !toggle || !panel || !backdrop) return;
+    if (!header || !toggle || !panel) return;
+
+    const closeOnScroll = () => setOpen(false);
 
     const setOpen = (open) => {
       header.classList.toggle('is-nav-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-      backdrop.hidden = !open;
-      document.body.classList.toggle('nav-open', open);
+      if (open) {
+        window.addEventListener('scroll', closeOnScroll, { passive: true });
+      } else {
+        window.removeEventListener('scroll', closeOnScroll);
+      }
     };
 
     toggle.addEventListener('click', () => setOpen(!header.classList.contains('is-nav-open')));
-    backdrop.addEventListener('click', () => setOpen(false));
     panel.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => setOpen(false));
     });
